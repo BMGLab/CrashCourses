@@ -192,7 +192,7 @@ read name
 
 echo "Hi there $name"
 
-echo "Welcome to filename!"
+echo "Welcome to $0"
 ```
 
 The above will prompt the user for input and then store that input as a string/text in a variable.
