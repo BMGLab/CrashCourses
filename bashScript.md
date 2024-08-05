@@ -60,7 +60,6 @@ As in any other programming language, you can use variables in Bash Scripting as
 ``` markdown
 name="filename"
 ```
-
 > {notice} as an important note, you can not have spaces before and after the = sign.
 
 -   After that, to access the variable, you have to use the `$` and reference it as shown below:
@@ -74,6 +73,35 @@ echo $name
 ``` markdown
 echo ${name}
 ```
+
+- Using `$()`:
+
+> Basic:
+
+``` markdown
+current_date=$(date)
+echo "The date is: $current_date"
+```
+
+> List on file:
+
+``` markdown
+files=$(ls /path/to/directory)
+echo "Files: $files"
+```
+
+> Mathematical:
+ 
+``` markdown
+result=$(echo "3 + 4" | bc)
+echo "Result: $result"
+```
+> Find a line count
+
+``` markdown
+line_count=$(wc -l < /path/to/file.txt)
+echo "There are $line_count on the file."
+``` 
 
 The above code would output: **filename** as this is the value of our **name** variable. Next, let's update our **filename.sh** script and include a variable in it. Again, you can open the file **filename.sh** with your favorite text editor, I'm using nano here to open the file:
 
