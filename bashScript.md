@@ -1,7 +1,3 @@
----
----
----
-
 # Introduction to Bash scripting
 
 Welcome to this Bash basics training guide! 🥳
@@ -40,7 +36,7 @@ It searches for bash executable in directories, listed in PATH environmental var
 
 ## 2. Bash Hello World
 
-Once we have our filename.sh file created and we'he specified the bash shebang on the very first line, we are ready to create our first `Hello Worl` bash script.
+Once we have our filename.sh file created and we'he specified the bash shebang on the very first line, we are ready to create our first `Hello World` bash script.
 
 To do that, open the **filename.sh** file again and add the following after the **#!/bin/bash** line:
 
