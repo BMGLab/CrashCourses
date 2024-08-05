@@ -217,6 +217,8 @@ The output of the above script would be:
 
 To reduce the code, we could change the first echo statement with the `read -p`, the read command used with `-p` flag will print a message before prompting the user for their input:
 
+> For Linux or windows:
+
 ``` markdown
 #!/bin/bash
 
@@ -225,6 +227,18 @@ read -p "What is your name? " name
 echo "Hi there $name"
 echo "Welcome to filename!"
 ```
+
+> For MacOS:
+``` markdown
+#!/bin/bash
+
+echo -n "Your name is: "
+read name
+echo "Hello $name"
+
+```
+
+
 
 ## 5. Bash Arguments
 
