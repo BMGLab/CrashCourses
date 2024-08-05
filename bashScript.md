@@ -499,6 +499,7 @@ fi
 
 If you have multiple conditions and scenarios, then can use `elif` statement with `if` and `else` statements.
 
+> For Linux:
  ``` markdown
 #!/bin/bash
 
@@ -510,6 +511,20 @@ elif [[ $num -lt 0 ]] ; then
     echo "The number is negative"
 else
     echo "The number is 0"
+fi
+ ```
+
+> For MacOS:
+
+ ``` markdown
+#!/bin/bash
+
+echo -n "What is your name? "
+read name
+
+if [[ -z ${name} ]]
+then
+   echo "Please enter your name!"
 fi
  ```
 
