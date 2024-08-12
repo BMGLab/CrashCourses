@@ -327,5 +327,11 @@ output:
     df_print: kable
 ---
 
+## Reactable package: 
 
+install.packages("devtools")
+devtools::install_github("glin/reactable")
+library(reactable)
+
+reactable(iris)
 
