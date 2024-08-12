@@ -1,0 +1,322 @@
+---
+title: "HTML"
+author: "ozlemtuna"
+date: "2024-08-09"
+output: 
+ html_document:
+---
+
+?rmarkdown::html_document
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+### Linear regression analysis
+#### Linear Model Creation: 
+lm() is the function used to fit linear models in R.
+dist ~ speed specifies the model formula, where dist is the dependent variable (response) and speed is the independent variable (predictor).
+data = cars indicates that the data to be used is from the cars dataset, which is a built-in dataset in R containing data on the speed of cars and the corresponding stopping distances.
+#### Extract Coefficients: 
+coef(fit) extracts the coefficients from the fitted model fit.
+The result b will contain two coefficients: the intercept and the slope of the regression line. 
+b[1] is the intercept, and b[2] is the slope of the line.
+#### Plot the Data:
+plot(cars) creates a scatter plot of the cars dataset, with speed on the x-axis and dist on the y-axis.
+This plot visualizes the relationship between car speed and stopping distance.
+#### Add Regression Line:
+abline(fit) adds the regression line to the existing plot.
+This line represents the linear model that was fitted to the data, showing the best-fit line that minimizes the difference between observed and predicted stopping distances.
+
+
+```{r}
+fit = lm(dist ~ speed, data = cars) # lm() is the function used to fit linear models in R.
+b = coef(fit) # coef(fit) extracts the coefficients from the fitted model fit.
+plot(cars) # plot(cars) creates a scatter plot of the cars dataset, with speed on the x-axis and dist on the y-axis.
+abline(fit) # abline(fit) adds the regression line to the existing plot.
+```
+
+#Create a content file in Rmarkdown;
+
+title: "demo"
+author: "ozlemtuna"
+date: "2024-08-10"
+output:
+  html_document:
+---
+
+# HTML
+This is a level 1 heading (H1) in your RMarkdown document. The `#` symbol indicates the highest level of heading. In the context of your document:
+
+- **HTML** is the main section or chapter.
+- In the output HTML file, this will be styled as a large, prominent heading.
+
+## toc
+This is a level 2 heading (H2). The `##` symbol creates a subheading under the main section. 
+
+- **toc** stands for "table of contents." In this context, it usually refers to settings related to the table of contents in your document.
+- The heading `toc` might be used to group settings or explanations related to the table of contents.
+
+### toc_depth
+This is a level 3 heading (H3). The `###` symbol creates a subheading under the `toc` section.
+
+- **toc_depth** specifies how many levels of headings should be included in the table of contents. For example, setting `toc_depth: 2` will include only `#` and `##` level headings in the TOC.
+- If you want all headings (from `#` to `####`) to appear in the TOC, you set `toc_depth: 4`.
+
+#### toc_float
+This is a level 4 heading (H4). The `####` symbol creates a subheading under the `toc_depth` section.
+
+- **toc_float** is a setting that, when enabled, allows the table of contents to "float" or remain visible as you scroll down the document.
+- Setting `toc_float: true` makes the TOC panel stay in view, which is useful for navigating long documents.
+
+## toc: true : Create a content file
+---
+title: "demo"
+author: "ozlemtuna"
+date: "2024-08-10"
+output:
+  html_document:
+    toc: true
+---
+
+# toc_depth: 2 : For two subheadings in the table of contents;
+
+---
+title: "demo"
+author: "ozlemtuna"
+date: "2024-08-10"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+
+
+# toc_float: true : To align the table of contents to the left; 
+---
+title: "demo"
+author: "ozlemtuna"
+date: "2024-08-10"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+---  
+
+   
+## toc_float collapsed: To hide subheadings;
+---
+title: "demo"
+author: "ozlemtuna"
+date: "2024-08-10"
+output:
+  html_document:
+    toc: true
+    toc_float:
+     collapsed: true 
+---
+    
+## toc_float smooth_scroll: 
+---
+title: "demo"
+author: "ozlemtuna"
+date: "2024-08-10"
+output:
+  html_document:
+    toc: true
+    toc_float:
+     smooth_scroll: true 
+---
+
+## number_sections: true : To add section numbers;
+---
+title: "demo"
+author: "ozlemtuna"
+date: "2024-08-10"
+output:
+  html_document:
+    toc: true
+    number_section: true
+---
+   
+# Adding tabs to subheadings: .tabset 
+
+#HTML {.tabset}
+##toc
+###toc_depth
+####toc_float
+ 
+# :.tabset-fade 
+
+#HTML {.tabset .tabset-fade }
+##toc
+###toc_depth
+####toc_float
+
+# pill :  .tabset-pills
+
+#HTML {.tabset .tabset-fade  .tabset-pills}
+##toc
+###toc_depth
+####toc_float
+ 
+# Adding subheadings to the text:
+---
+title: "demo"
+subtitle: "subdemo"
+author: "ozlemtuna"
+date: "2024-08-10"
+output:
+  html_document:
+    toc: true
+    number_section: true
+---
+
+# Font styles
+
+italic: _italic_ or *italic*
+bold: __bold__ or **bold**
+Subscript: H~2~O
+Superscript: x^2^ 
+code: `code`
+
+# Linking 
+
+## linking
+[BMGLab](https://bmglab-ege.com)
+
+##adding image
+![BMGLabimage](https://bmglab-ege.com/static/media/bmglabold.1eed75cb6d4e9e176611.jpg)
+
+
+
+
+# Writing Mathematical Equations
+
+##Inline Equation Example:
+
+
+$f(k) = {n\choose k} p^{k} (1-p)^{n-k}$
+
+##Block Equation:
+
+$$f(k) = {n\choose k} p^{k} (1-p)^{n-k}$$
+
+# Creating R Code Snippets
+```{r, chunk-label, results='hide',fig.height=4, fig.width=4}
+
+```
+
+
+#Commonly Used Option Definitions
+
+eval: Evaluation of a code snippet
+
+```{r}
+do_it = Sys.Date() '2024-08-09'
+```
+
+```{r, eval= do_it}
+x=rnorm(100)
+
+```
+
+# Commonly Used Option Definitions 
+
+- `eval`: Determines whether the code chunk should be evaluated.
+- `echo`: Decides whether the source code will be displayed in the output.
+- `results`:
+  - `'hide'`: Hides the output.
+  - `'asis'`: Displays the output as it is.
+- `collapse`: Decides whether to combine the text output and source code into a single code block in the output.
+- `error`, `message`, `warning`: Controls whether to print errors, messages, or warnings.
+- `include`: When set to FALSE for `echo`, `results`, `warning`, `message`, it means none of these options will be applied.
+- `cache`: Determines whether unchanged chunks are rerun.
+- `fig.height`, `fig.width`: Adjusts the size of the figure.
+- `out.width`, `out.height`: Changes the percentage of the output's width and height.
+- `fig.align`: Aligns the figure as 'left', 'center', or 'right' in the output.
+- `fig.cap`: Adds a caption to the figure.
+- `dev`: Used for saving R graphics.
+
+# Figures / Graphics
+
+```{r}
+plot(cars , pch = 18)
+```
+
+```{r, fig.show='hold', out.width='%50'}
+par(mar = c(4,4,.2,.1))
+plot(cars, pch=19)
+plot(pressure,pch=17)
+```
+
+```{r,out.width='%25', fig.align='center',fig.cap='BMGLab'}
+knitr::include_graphics('https://bmglab-ege.com/static/media/labgif.d195f52fc41469846a01.gif')
+
+```
+# Creating Tables
+```{r tables-mtcars}
+knitr::kable(iris[1:5, ], caption = 'Flowers')
+```
+
+
+
+# Viewing Datasets
+
+## (`paged`) Viewing: Divides tables into pages across rows and columns.
+
+---
+title: "demo"
+author: "ozlemtuna"
+date: "2024-08-10"
+output:
+  html_document:
+    toc: true
+    number_section: true
+    df_print: paged
+
+---
+```{r}
+mtcars
+```
+```{r cols.print=3, rownames.print=3}
+mtcars
+```
+
+## (`kable`) Viewing: To show all rows.
+---
+title: "demo"
+author: "ozlemtuna"
+date: "2024-08-10"
+output:
+  html_document:
+    toc: true
+    number_section: true
+    df_print: kable
+---
+
+
+
