@@ -53,8 +53,8 @@ Edge). - Stable internet connection.
 ### 3. Access the Tutorial Notebook
 
 Download the tutorial notebook provided for this session: - **File
-Name**: `bulk_rnaseq_workflow.ipynb` - [Download the
-file](sandbox:/mnt/data/bulk_rnaseq_workflow.ipynb).
+Name**: `Bulk_RNAseq_analysis_tutorial.ipynb` - [Download the
+file](https://github.com/BMGLab/CrashCourses/blob/main/Bulk_RNAseq_analysis_tutorial.ipynb).
 
 ------------------------------------------------------------------------
 
@@ -68,8 +68,8 @@ file](sandbox:/mnt/data/bulk_rnaseq_workflow.ipynb).
 ### Step 2: Upload the Notebook
 
 1.  Click `File > Upload Notebook`.
-2.  Upload the `bulk_rnaseq_workflow.ipynb` file from your local
-    machine.
+2.  Upload the `Bulk_RNAseq_analysis_tutorial.ipynb` file from your
+    local machine.
 
 ### Step 3: Set Up the Environment
 
@@ -77,7 +77,7 @@ file](sandbox:/mnt/data/bulk_rnaseq_workflow.ipynb).
     step will set up the required Python libraries and environment.
 
     ``` python
-    !pip install pandas numpy seaborn matplotlib scikit-learn
+    !pip install pandas numpy seaborn matplotlib scikit-learn pydeseq2
     ```
 
 2.  If additional libraries are required, follow the prompts in the

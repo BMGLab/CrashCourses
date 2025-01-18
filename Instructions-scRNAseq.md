@@ -61,7 +61,7 @@ file](https://github.com/BMGLab/CrashCourses/blob/main/Single-cell-RNAseq_analys
 
     ``` python
     # Example installation command
-    !pip install scanpy anndata scikit-learn matplotlib seaborn
+    !pip install scanpy anndata scikit-learn matplotlib seaborn igraph
     ```
 
 2.  If additional libraries are required, follow the prompts in the
