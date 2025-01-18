@@ -48,7 +48,7 @@ Download the tutorial notebook provided for this session:
 1. Run the first cell to install dependencies. This step will set up the required Python libraries and environment.
    ```python
    # Example installation command
-   !pip install scanpy anndata scikit-learn matplotlib seaborn
+   !pip install scanpy anndata scikit-learn matplotlib seaborn igraph
    ```
 
 2. If additional libraries are required, follow the prompts in the notebook.

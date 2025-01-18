@@ -35,8 +35,8 @@ While Google Colab eliminates the need for local installations, ensure your loca
 
 ### 3. Access the Tutorial Notebook
 Download the tutorial notebook provided for this session:
-   - **File Name**: `bulk_rnaseq_workflow.ipynb`
-   - [Download the file](sandbox:/mnt/data/bulk_rnaseq_workflow.ipynb).
+   - **File Name**: `Bulk_RNAseq_analysis_tutorial.ipynb`
+   - [Download the file](https://github.com/BMGLab/CrashCourses/blob/main/Bulk_RNAseq_analysis_tutorial.ipynb).
 
 ---
 
@@ -48,7 +48,7 @@ Download the tutorial notebook provided for this session:
 
 ### Step 2: Upload the Notebook
 1. Click `File > Upload Notebook`.
-2. Upload the `bulk_rnaseq_workflow.ipynb` file from your local machine.
+2. Upload the `Bulk_RNAseq_analysis_tutorial.ipynb` file from your local machine.
 
 ### Step 3: Set Up the Environment
 1. Run the first cell in the notebook to install dependencies. This step will set up the required Python libraries and environment.
