@@ -1,0 +1,101 @@
+---
+title: "Preparation and Instructions for Bulk RNA-seq Tutorial"
+author: "Yasin Kaymaz, Ph.D., Ege University, Bioengineering Dept."
+date: "`r Sys.Date()`"
+output: html_document
+---
+## 1st Winter School of Translational Immunology (TIWS)
+
+`Bioinformatics in Immunology sessions | DRY LAB 1 (Group C)`
+
+- Day 2 (14:00 - 16:00) - Bulk RNAseq data analysis
+- Day 3 (14:00 - 16:00) - single-cell RNAseq data analysis
+- Day 4 (11:10 - 13:00) - single-cell RNAseq data analysis, cont.
+
+### Objective
+This tutorial will guide students through a hands-on bulk RNA sequencing (RNA-seq) analysis using Google Colab and Python. Students will analyze gene expression data, perform normalization, PCA, sample correlation, and differential expression analysis using DESeq2.
+
+### Dataset
+- SRA Study ID: SRP428267
+
+The publication titled _"TRAIL promotes the polarization of human macrophages toward a proinflammatory M1 phenotype and is associated with increased survival in cancer patients with high tumor macrophage content"_ investigates the role of Tumor Necrosis Factor-Related Apoptosis-Inducing Ligand (TRAIL) in macrophage polarization. The study demonstrates that TRAIL induces human macrophages to adopt a proinflammatory M1 phenotype. Furthermore, the research correlates high tumor macrophage content with improved survival rates in cancer patients, suggesting that TRAIL-mediated M1 polarization may contribute to anti-tumor immunity. [Gunalp et al., 2023](https://pubmed.ncbi.nlm.nih.gov/37809073/)
+
+- Note: You will be able to download the processed gene counts matrix during the workshop. 
+---
+
+## Preparation Checklist
+
+### 1. Google Account
+Ensure you have an active Google account to access Google Colab. If you don't have one, [create a Google account](https://accounts.google.com/signup).
+
+### 2. Install Required Software (Optional)
+While Google Colab eliminates the need for local installations, ensure your local machine has:
+   - A modern browser (e.g., Chrome, Firefox, or Edge).
+   - Stable internet connection.
+
+### 3. Access the Tutorial Notebook
+Download the tutorial notebook provided for this session:
+   - **File Name**: `bulk_rnaseq_workflow.ipynb`
+   - [Download the file](sandbox:/mnt/data/bulk_rnaseq_workflow.ipynb).
+
+---
+
+## Session Instructions
+
+### Step 1: Open Google Colab
+1. Visit [Google Colab](https://colab.research.google.com/).
+2. Sign in with your Google account.
+
+### Step 2: Upload the Notebook
+1. Click `File > Upload Notebook`.
+2. Upload the `bulk_rnaseq_workflow.ipynb` file from your local machine.
+
+### Step 3: Set Up the Environment
+1. Run the first cell in the notebook to install dependencies. This step will set up the required Python libraries and environment.
+   ```python
+   !pip install pandas numpy seaborn matplotlib scikit-learn
+   ```
+2. If additional libraries are required, follow the prompts in the notebook.
+
+### Step 4: Upload or Access Data
+- **Option A: Use Preloaded Data**
+   - Follow the instructions in the notebook to use the sample data provided.
+- **Option B: Use Your Own Data**
+   - Mount your Google Drive to access your datasets:
+     ```python
+     from google.colab import drive
+     drive.mount('/content/drive')
+     ```
+
+### Step 5: Execute the Cells
+1. Run each cell sequentially by clicking the play icon on the left of each cell.
+2. Ensure you read the accompanying instructions for each step.
+
+### Step 6: Troubleshooting
+- If any errors occur, check the error message for missing dependencies and install them.
+- Ensure that the runtime is set to `Python 3` by navigating to `Runtime > Change Runtime Type`.
+
+---
+
+## Tips for a Successful Hands-On Session
+- **Save Your Progress**: Periodically save your notebook by clicking `File > Save a copy in Drive`.
+- **Ask Questions**: Use the designated communication channel (e.g., Zoom chat or Slack) for real-time questions.
+- **Follow Along**: Ensure you're running the cells in the correct order to avoid errors.
+
+---
+
+## After the Session
+
+### Save Results
+1. Save any generated plots or data to your Google Drive or download them to your local machine.
+   ```python
+   significant_genes.to_csv("significant_genes.csv", index=False)
+   ```
+
+### Provide Feedback
+Share your feedback on the session to help improve future tutorials.
+
+---
+
+## Support
+If you encounter issues before or during the session, contact the instructor for assistance.
